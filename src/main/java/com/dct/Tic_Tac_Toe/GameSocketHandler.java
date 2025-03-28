@@ -21,7 +21,7 @@ public class GameSocketHandler extends TextWebSocketHandler {
     @Override
     public void afterConnectionEstablished(WebSocketSession session) throws Exception {
 
-        if (playerCross == null) {
+        if (playerCross == null || !playerCross.getSession().isOpen()) {
             playerCross = Player
                     .builder()
                     .session(session)
@@ -30,7 +30,7 @@ public class GameSocketHandler extends TextWebSocketHandler {
                     .build();
             gameState = GameState.START;
             setBoardDataEmpty();
-        } else if (playerCircle == null){
+        } else if (playerCircle == null || !playerCross.getSession().isOpen()){
             playerCircle = Player
                     .builder()
                     .session(session)

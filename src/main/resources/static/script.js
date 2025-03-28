@@ -117,6 +117,8 @@ function updateBoard(data) {
             let index = rowIndex * 3 + colIndex;
             if (cols[colIndex] !== "null" ) {
                 cells[index].textContent = cols[colIndex]; // Update UI
+            } else {
+                cells[index].textContent = "";
             }
         });
     });
