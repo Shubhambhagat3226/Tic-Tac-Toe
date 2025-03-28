@@ -43,10 +43,25 @@
     .cell:hover {
       background-color: #ddd;
     }
+    #player {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 1.2em;
+  color: aqua;
+  background-color: black;
+  border-radius: 5px;
+}
+
   </style>
 </head>
 
 <body>
+  <header>
+    <h2 id="player"></h2>
+  </header>
   <div class="container">
     <h1 id="head">Tic-Tac-Toe</h1>
     <div class="board" id="board">

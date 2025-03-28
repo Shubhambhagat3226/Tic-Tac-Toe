@@ -11,6 +11,7 @@ import org.springframework.web.socket.WebSocketSession;
 @NoArgsConstructor
 @Builder
 public class Player {
+    private String name;
     private WebSocketSession session;
     private String  symbol;
     private boolean turn;
